@@ -8,5 +8,5 @@ public class TrainingPlanDto
     
     public string? Description { get; set; }
 
-    public DateTime CreateTime { get; set; } = DateTime.Now;
+    public DateTime CreateTime { get; set; }
 }

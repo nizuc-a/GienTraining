@@ -3,11 +3,8 @@
 namespace TrainingApi.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("/api/TrainingPlan/{planId}/[controller]")]
 public class TrainingController : ControllerBase
 {
-    public TrainingController()
-    {
-        
-    }
+    
 }

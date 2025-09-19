@@ -1,9 +1,19 @@
+using DataModel;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using TrainingApi.Interfaces.Repository;
+using TrainingApi.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+});
+
+// builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddSwaggerGen();
 
 builder.Services.AddSwaggerGen(option =>
 {
@@ -32,6 +42,13 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+builder.Services.AddScoped<ITrainingPlanRepository, TrainingPlanRepository>();
 
 var app = builder.Build();
 

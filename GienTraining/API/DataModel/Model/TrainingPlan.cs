@@ -15,7 +15,7 @@ public class TrainingPlan
 
     public DateTime CreateTime { get; set; } = DateTime.Now;
 
-    public ICollection<Training>? Trainings { get; set; }
+    public ICollection<TrainingDay>? Trainings { get; set; }
     
     public ICollection<User2Plan>? User2Plans { get; set; }
 }
