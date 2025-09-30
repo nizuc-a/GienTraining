@@ -50,6 +50,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddScoped<ITrainingPlanRepository, TrainingPlanRepository>();
 builder.Services.AddScoped<ITrainingDayRepository, TrainingDayRepository>();
+builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
 
 var app = builder.Build();
 

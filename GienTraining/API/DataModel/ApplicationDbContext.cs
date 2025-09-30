@@ -5,11 +5,12 @@ namespace DataModel;
 
 public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
 {
+    public DbSet<AppUser> Users { get; set; }
+    public DbSet<TrainingPlan> TrainingPlans { get; set; }
+    public DbSet<TrainingDay> TrainingDays { get; set; }
     public DbSet<Exercise> Exercises { get; set; }
     public DbSet<ExerciseName> ExerciseNames { get; set; }
-    public DbSet<TrainingDay> TrainingDays { get; set; }
-    public DbSet<TrainingPlan> TrainingPlans { get; set; }
-    public DbSet<AppUser> Users { get; set; }
+    public DbSet<ExerciseType> ExerciseTypes { get; set; }
     public DbSet<User2Plan> User2Plans { get; set; }
 
 

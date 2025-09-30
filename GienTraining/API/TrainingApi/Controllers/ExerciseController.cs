@@ -29,7 +29,7 @@ public class ExerciseController : ControllerBase
         return Ok(workouts);
     }
     
-    [HttpGet]
+    [HttpGet("{excerciseId:int}")]
     public async Task<IActionResult> GetById(int excerciseId)
     {
         var workouts = await _exerciseRepository.GetByIdAsync(excerciseId);

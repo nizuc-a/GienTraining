@@ -20,5 +20,3 @@ D:\GienTraining\GienTraining\API\DataModel\obj\Debug\net8.0\refint\DataModel.dll
 D:\GienTraining\GienTraining\API\DataModel\obj\Debug\net8.0\DataModel.pdb
 D:\GienTraining\GienTraining\API\DataModel\obj\Debug\net8.0\DataModel.genruntimeconfig.cache
 D:\GienTraining\GienTraining\API\DataModel\obj\Debug\net8.0\ref\DataModel.dll
-D:\GienTraining\GienTraining\API\DataModel\obj\Debug\net8.0\en\DataModel.resources.cs
-D:\GienTraining\GienTraining\API\DataModel\obj\Debug\net8.0\ru\DataModel.resources.cs

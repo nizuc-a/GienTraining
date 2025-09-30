@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\GienTraining\\GienTraining\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250919142141_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\DataModel\\Migrations\\20250919142141_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250919114730_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\DataModel\\Migrations\\20250919114730_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250930085824_AddTableExcerciseType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\DataModel\\Migrations\\20250930085824_AddTableExcerciseType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,26 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250919142141_InitialCreate.cs",
-              "DocumentMoniker": "D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250919142141_InitialCreate.cs",
-              "RelativeDocumentMoniker": "API\\DataModel\\Migrations\\20250919142141_InitialCreate.cs",
-              "ToolTip": "D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250919142141_InitialCreate.cs",
-              "RelativeToolTip": "API\\DataModel\\Migrations\\20250919142141_InitialCreate.cs",
+              "Title": "20250930085824_AddTableExcerciseType.cs",
+              "DocumentMoniker": "D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250930085824_AddTableExcerciseType.cs",
+              "RelativeDocumentMoniker": "API\\DataModel\\Migrations\\20250930085824_AddTableExcerciseType.cs",
+              "ToolTip": "D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250930085824_AddTableExcerciseType.cs",
+              "RelativeToolTip": "API\\DataModel\\Migrations\\20250930085824_AddTableExcerciseType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T14:21:41.445Z",
+              "WhenOpened": "2025-09-30T08:58:24.646Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250919114730_InitialCreate.cs",
-              "DocumentMoniker": "D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250919114730_InitialCreate.cs",
-              "RelativeDocumentMoniker": "API\\DataModel\\Migrations\\20250919114730_InitialCreate.cs",
-              "ToolTip": "D:\\GienTraining\\GienTraining\\API\\DataModel\\Migrations\\20250919114730_InitialCreate.cs",
-              "RelativeToolTip": "API\\DataModel\\Migrations\\20250919114730_InitialCreate.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T11:47:30.524Z"
             }
           ]
         }
