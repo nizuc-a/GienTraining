@@ -15,7 +15,7 @@ public class TrainingDay
 
     public DateTime CreateTime { get; set; } = DateTime.Now;
     
-    public ICollection<Exercise>? Exercises { get; set; }
+    public ICollection<Exercise> Exercises { get; set; } = new List<Exercise>();
     
     public TrainingPlan? TrainingPlan { get; set; }
     public int? TrainingPlanId { get; set; }

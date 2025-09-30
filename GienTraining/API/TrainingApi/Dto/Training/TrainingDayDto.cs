@@ -1,6 +1,6 @@
 ﻿namespace TrainingApi.Dto.Training;
 
-public class TrainingDto
+public class TrainingDayDto
 {
     public int Id { get; set; }
     

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataModel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250919133414_InitialCreate")]
+    [Migration("20250919142141_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -67,6 +67,9 @@ namespace DataModel.Migrations
                     b.Property<int?>("Approaches")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ExerciseId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ExerciseNameId")
                         .HasColumnType("int");
 
@@ -86,6 +89,8 @@ namespace DataModel.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ExerciseId");
 
                     b.HasIndex("ExerciseNameId");
 
@@ -159,7 +164,7 @@ namespace DataModel.Migrations
 
                     b.HasIndex("TrainingPlanId");
 
-                    b.ToTable("Trainings");
+                    b.ToTable("TrainingDays");
                 });
 
             modelBuilder.Entity("DataModel.Model.TrainingPlan", b =>
@@ -207,6 +212,10 @@ namespace DataModel.Migrations
 
             modelBuilder.Entity("DataModel.Model.Exercise", b =>
                 {
+                    b.HasOne("DataModel.Model.Exercise", null)
+                        .WithMany("Exercises")
+                        .HasForeignKey("ExerciseId");
+
                     b.HasOne("DataModel.Model.ExerciseName", "ExerciseName")
                         .WithMany()
                         .HasForeignKey("ExerciseNameId")
@@ -259,6 +268,11 @@ namespace DataModel.Migrations
             modelBuilder.Entity("DataModel.Model.AppUser", b =>
                 {
                     b.Navigation("User2Plans");
+                });
+
+            modelBuilder.Entity("DataModel.Model.Exercise", b =>
+                {
+                    b.Navigation("Exercises");
                 });
 
             modelBuilder.Entity("DataModel.Model.TrainingDay", b =>

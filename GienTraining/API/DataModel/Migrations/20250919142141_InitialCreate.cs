@@ -70,7 +70,7 @@ namespace DataModel.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Trainings",
+                name: "TrainingDays",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -82,9 +82,9 @@ namespace DataModel.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Trainings", x => x.Id);
+                    table.PrimaryKey("PK_TrainingDays", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Trainings_TrainingPlans_TrainingPlanId",
+                        name: "FK_TrainingDays_TrainingPlans_TrainingPlanId",
                         column: x => x.TrainingPlanId,
                         principalTable: "TrainingPlans",
                         principalColumn: "Id");
@@ -127,6 +127,7 @@ namespace DataModel.Migrations
                     Weight = table.Column<double>(type: "float", nullable: true),
                     Repetitions = table.Column<int>(type: "int", nullable: true),
                     Approaches = table.Column<int>(type: "int", nullable: true),
+                    ExerciseId = table.Column<int>(type: "int", nullable: true),
                     TrainingDayId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -145,11 +146,21 @@ namespace DataModel.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Exercises_Trainings_TrainingDayId",
+                        name: "FK_Exercises_Exercises_ExerciseId",
+                        column: x => x.ExerciseId,
+                        principalTable: "Exercises",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Exercises_TrainingDays_TrainingDayId",
                         column: x => x.TrainingDayId,
-                        principalTable: "Trainings",
+                        principalTable: "TrainingDays",
                         principalColumn: "Id");
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Exercises_ExerciseId",
+                table: "Exercises",
+                column: "ExerciseId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Exercises_ExerciseNameId",
@@ -167,8 +178,8 @@ namespace DataModel.Migrations
                 column: "TrainingDayId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Trainings_TrainingPlanId",
-                table: "Trainings",
+                name: "IX_TrainingDays_TrainingPlanId",
+                table: "TrainingDays",
                 column: "TrainingPlanId");
 
             migrationBuilder.CreateIndex(
@@ -193,7 +204,7 @@ namespace DataModel.Migrations
                 name: "ExerciseType");
 
             migrationBuilder.DropTable(
-                name: "Trainings");
+                name: "TrainingDays");
 
             migrationBuilder.DropTable(
                 name: "Users");

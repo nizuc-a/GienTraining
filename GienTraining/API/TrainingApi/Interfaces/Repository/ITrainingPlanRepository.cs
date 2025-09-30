@@ -10,5 +10,5 @@ public interface ITrainingPlanRepository
     Task<TrainingPlan?> GetByIdAsync(int id);
     Task<TrainingPlan> CreateAsync(TrainingPlan trainingPlan);
     Task<TrainingPlan> UpdateAsync(TrainingPlan trainingPlan);
-    Task<TrainingPlan> DeleteAsync(int id);
+    Task<TrainingPlan?> DeleteAsync(int id);
 }

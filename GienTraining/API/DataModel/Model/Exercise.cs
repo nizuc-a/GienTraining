@@ -12,7 +12,7 @@ public class Exercise
     [Required(ErrorMessage = "ExerciseTypeRequired")]
     public ExerciseType? ExerciseType { get; set; }
 
-    ICollection<Exercise>? Exercises { get; set; }
+    public ICollection<Exercise> Exercises { get; set; } = new List<Exercise>();
 
     public int? Percent { get; set; }
 
@@ -21,4 +21,7 @@ public class Exercise
     public int? Repetitions { get; set; }
 
     public int? Approaches { get; set; }
+
+    public TrainingDay? TrainingDay { get; set; }
+    public int? TrainingDayId { get; set; }
 }

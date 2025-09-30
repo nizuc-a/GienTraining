@@ -48,14 +48,14 @@ public class TrainingPlanRepository : ITrainingPlanRepository
         return trainingPlan;
     }
 
-    public async Task<TrainingPlan> DeleteAsync(int id)
+    public async Task<TrainingPlan?> DeleteAsync(int id)
     {
-        var stock = await GetByIdAsync(id);
-        if (stock != null)
-        {
-            _context.TrainingPlans.Remove(stock);
-            await _context.SaveChangesAsync();
-        }
-        return stock;
+        var plan = await GetByIdAsync(id);
+        if (plan == null) 
+            return null;
+        
+        _context.TrainingPlans.Remove(plan);
+        await _context.SaveChangesAsync();
+        return plan;
     }
 }
